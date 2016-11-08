@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+
+  get 'categorized' => 'storefront#items_by_category'
+  get 'all' => 'storefront#all_items'
+
   resources :products
   resources :categories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'storefront#all_items'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
