@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :line_items
+  resources :orders
   devise_for :users
   get 'by_category' => 'storefront#items_by_category'
   get 'all' => 'storefront#all_items'
