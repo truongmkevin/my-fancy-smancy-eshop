@@ -1,0 +1,11 @@
+<h1>Cart#view_cart</h1>
+<p>Find me in app/views/cart/view_cart.html.erb</p>
+
+<% @line_items.each do |line_item| %>
+  <ul>
+    <li><%= line_item.product.name %></li>
+    <li><%= line_item.quantity %></li>
+    <li><%= number_to_currency(line_item.product.price) %></li>
+    <li><%= number_to_currency(line_item.total) %></li>
+  </ul>
+<% end %>
