@@ -9,3 +9,9 @@
     <li><%= number_to_currency(line_item.total) %></li>
   </ul>
 <% end %>
+
+<div>
+  <p>
+    <%= link_to "Proceed to Checkout", checkout_path, class: "btn btn-success" %>
+  </p>
+</div>
